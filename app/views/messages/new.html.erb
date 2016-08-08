@@ -1,0 +1,9 @@
+<h1> Messages New page </h1>
+<ul id="chat">
+<%= render @messages %>
+</ul>
+
+<%= form_for Message.new, :remote => true do |f| %>
+<%= f.text_area :msg , id:"my_msg"%>
+<%= f.submit "submit"%>
+<% end %>
